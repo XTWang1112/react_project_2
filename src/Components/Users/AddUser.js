@@ -1,15 +1,20 @@
+import Card from "../UI/Card";
+import styles from "./AddUser.module.css";
+
 const AddUser = (props) => {
   const addUserHandler = (event) => {
     event.preventDefault();
   };
   return (
-    <form onSubmist={addUserHandler}>
-      <label htmlFor="username">Username</label>
-      <input id="username" type="text" />
-      <label htmlFor="age">Age(years)</label>
-      <input id="age" type="number" />
-      <button type="submit">Add User</button>
-    </form>
+    <Card className={styles.input}>
+      <form onSubmist={addUserHandler}>
+        <label htmlFor="username">Username</label>
+        <input id="username" type="text" />
+        <label htmlFor="age">Age(years)</label>
+        <input id="age" type="number" />
+        <button type="submit">Add User</button>
+      </form>
+    </Card>
   );
 };
 
